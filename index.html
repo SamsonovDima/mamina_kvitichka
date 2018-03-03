@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ru">
+   <head>
+      <meta charset="UTF-8">
+      <title>товар корзина</title>
+      <link href="https://fonts.googleapis.com/css?family=Arsenal" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Alegreya" rel="stylesheet">
+      <link rel="stylesheet" href="css/style.css">
+      <link rel="stylesheet" href="css/normalize.css">
+      <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+      <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+   </head>
+   <body>
+      <header>
+         <nav class="nav_content">
+            <div class="nav_header">
+               <div class="nav_logo">
+                  <p class="nav_logo_text" id="nav_logo">Мамина Квіточка</p>
+                  <p class="nav_logo_info">прикраси ручної роботи</p>
+               </div>
+               <div class="nav_menu">
+                  <div class="nav_menu_row">
+                     <div class="nav_menu_contact">
+                        <div class="nav_menu_insta">
+                           <img src="images/icons/insta.png" alt="insta.png">
+                           <span>insta.nastya</span>
+                        </div>
+                        <div class="nav_menu_phone">
+                           <img src="images/icons/telephon.png" alt="telephon.png">
+                           <span>0667731910</span>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="nav_menu_submenu">
+                     <ul class="nav_menu_point">
+                        <li class="nav_menu_li"><a href="#jewelry" class="link_category">Прекраси</a></li>
+                        <li class="nav_menu_li"><a href="#about_me" class="link_category">Про мене</a></li>
+                        <li class="nav_menu_li"><a href="#contact" class="link_category">Контакти</a></li>
+                        <li class="nav_menu_li"><a href="#delivery" class="link_category">Доставка</a></li>
+                        <li class="nav_menu_link"><a href="#ModalOpen" title="ModalOpenCart">Кошик</a></li>
+                     </ul>
+                     <div class="nav_menu_summ">
+                        <img src="images/icons/cart_btn.png" alt="cart_btn">
+                        <p class="sum-cart"></p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div  class="navig_baner">
+               <img src="images/jewelry/yellow.jpg" alt="banner.jpg">
+               <img src="images/jewelry/green.jpg" alt="banner.jpg">
+               <img src="images/jewelry/yellow.jpg" alt="banner.jpg">
+               <img src="images/jewelry/green.jpg" alt="banner.jpg">
+            </div>
+         </nav>
+
+         <div id="ModalOpen" class="Window">
+            <div>
+                <!-- <img src="images/cart/cart_bg.jpg" alt=""> -->
+               <a href="#close" title="Закрыть" id="close"><img src="images/cart/close btn.png" alt="close"></a>
+               <div class="main_cart_form">
+                  <div class="main-cart_header">
+                     <div class="cart_header-left">
+                        <p class="cart_header-cart">Кошик</p>
+                        <p class="cart_header-items">Прекраси</p>
+                     </div>
+                     <div class="cart_header-right">
+                        <p class="cart_header-cost">Ціна</p>
+                     </div>
+                  </div>
+                  <div class="main-cart">
+                  </div>
+                  <div class="main-cart-footer">
+                     <hr align="left">
+                     <img src="images/cart/flower.png" alt="main-cart-footer-img">
+                     <hr align="right">
+                  </div>
+                  <div class="summcost">
+                     <p id="summcost-first">До сплати:</p>
+                     <p class="summ" id="summcost-second"> </p>
+                     <p id="summcost-second"> грн</p>
+                  </div>
+               </div>
+               <form  class="email-field">
+                  <p class="email-field-info">Інформація про доставку</p>
+                  <input type="text" id="ename" placeholder="Ваше Ім'я, прізвище, по батькові">
+                  <input type="tel" id="ephone" placeholder="Контактний телефон">
+                  <textarea type="comment" id="etext" placeholder="Ваше повідомлення"></textarea>
+                  <input type="email" id="email" placeholder="Ваш E-mail">
+                  <input type="text" id="ecity" placeholder="Ваше місто">
+                  <input type="text" id="epost" placeholder="Відділення Нової пошти">
+                  <p class="email-field-info-form">Час доставки готових прекрас протягом 4 робочих днів <br>
+                     Термін виконання на замовлення 10-14 днів
+                  </p>
+                  <button class="send-email">Оформити заказ</button>
+               </form>
+            </div>
+         </div>
+      </header>
+      <main class="main_goods_special">
+         <div id="openmodal" class="modaldialog">
+            <div  class="content">
+            </div>
+         </div>
+         <div class="mini-cart"></div>
+         <!-- скрытый блок с продукцией -->
+         <div class="main_goods_nav">
+            <ul class="main_goods_point">
+               <li class="main_goods_li"><a href="#new_order" id="jewelry" class="link_category">Новинки</a></li>
+               <li class="main_goods_li"><a href="#in_now_order" class="link_category">В наявності</a></li>
+               <li class="main_goods_li"><a href="#not_order" class="link_category">Під замовлення</a></li>
+               <li class="main_goods_li"><a href="#sales_order" class="link_category">Акції</a></li>
+               
+            </ul>
+         </div>
+         <div id="goods" >
+             <p class="goods_category"><a id="sales_order" >Акції</a></p>
+            <div class="category_goors_new"></div>            <!-- выводить 'Акции' -->
+            <p class="goods_category"><a id="in_now_order">В наявності</a></p>
+            <div class="in-stock-goods"></div>          <!-- выводить 'в наличии' -->
+            <p class="goods_category"><a id="not_order">Під замовлення</a></p>
+            <div class="order-goods"></div>         <!-- выводить 'под заказ' -->
+            <p class="goods_category"><a id="new_order">Новинки</a></p>
+            <div class="order-new"></div>
+         </div>
+      </main>
+      <footer class="footer_content">
+          <div class="footer_content-flower"> <hr> <img src="images/icons/flower-pink.png" alt="flower-pink"> <hr> </div>
+          <div class="footer_content-self">
+              <div class="footer_content-self-text"> <span><a id="about_me">Про нас</a></span></div>
+              <div class="footer_content-self-photo"><img src="images/self/my_self.jpg" alt="photo"></div>
+              <div class="footer_content-self-content"><span>Жінкам завжди хочеться виглядати красиво.
+                    Для цього і вигадали різноманітні прикраси,
+                    які підкреслюють індивідуальність та допомагають створити довершений образ. 
+                    Століття за століттями вироби з бісеру стають все більш популярними і за красою та оригінальністю
+                        нічим не поступаються вишуканій дорогій біжутерії відомих модних брендів.</span></div>
+          </div>
+          <div class="footer_content-form">
+              <div class="footer_content-form-text"> <span><a id="contact">Контакти</a></span></div>
+
+              <div class="footer_content-form-block">
+                    <div class="footer_content-form-contact">
+                        <div class="footer_content-form-contact-phon">
+                            <img src="images/icons/telephon.png" alt="telephon.png">
+                            <span>0667731910</span>
+                        </div>
+
+                        <div class="footer_content-form-contact-email">
+                            <img src="images/icons/mail.png" alt="telephon.png">
+                            <span>dyzyk@gmail.com</span>
+                        </div>
+
+                        <div class="footer_content-form-contact-insta">
+                            <img src="images/icons/insta.png" alt="insta.png">
+                            <span>insta.nastya</span>
+                        </div>
+                        <div class="footer_content-form-contact-text">
+                            <span>Для індивідуального замовлення, ви можете зв'язатися зі мною по Viber або поштою.
+                                Ми обговоримо всі подробиці та терміни.
+                            </span>
+                        </div>
+                    </div>
+                    <form class="footer_content-form-forma" >
+                            <a class="footer_content-form-info" id="stock_input">Зворотній зв'язок</a>
+                            <input type="text" id="ename-form" placeholder="Ваше Ім'я">
+                            <input type="tel" id="ephone-form" placeholder="Контактний телефон">
+                            <input type="email" id="email-form" placeholder="Ваш E-mail">
+                            <textarea type="comment" class="etext-form" id="etext-form" placeholder="Ваше повідомлення" value=""></textarea>
+                            <div class="footer_content-form-row">
+                                    <p class="email-field-info-form">Ви також можете замовити прикрасу яка вам  сподобалась,
+                                            заповнивши цю форму. <br> <br>  Терміни виконанння на замовлення 10-14 днів. 
+                                    </p>
+                                    <button class="send-form">Надіслати</button>
+                            </div>
+                            
+                    </form>
+              </div>
+          </div>
+          <div class="footer_content-delivery">
+                <div class="footer_content-delivery-text"> <span><a id="delivery">Доставка</a></span> </div>
+                <div class="footer_content-delivery-content"><span> <strong>Сплата та доставка</strong> <br><br>
+                    Оплата здійснюеться картою Приват Банку, або при отріманні товару на новій пошті.<br><br>
+                    Після оплати замовлення буде сформоване в залежності    від готовності прекрас.
+                    Прекраси під замовлення готуються протягом 10-14 днів.<br><br>
+                    Доставка проводиться по всій Україні Новою Поштою, Укр Поштою.
+                    Доставка готових прекрас відбувається протягом 4-х робочих днів.</span> 
+                </div>
+          </div>
+          <div class="footer_content-background">
+                <div class="footer_content-flower-second"> <hr> <img src="images/icons/flower-pink.png" alt="flower-pink"> <hr> </div>
+          </div>
+      </footer>
+      <div class="up">
+          <a href="#nav_logo" class="link_nav_logo"><img src="/images/icons/up.png" alt="up"></a>
+          <p>В гору</p>
+      </div>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+      <script src="js/eshop.js"></script>
+      <script src="js/cart.js"></script>
+      <script src="slick/slick.min.js"></script>
+      <script src="js/slider.js"></script>
+   </body>
+</html>

@@ -1,0 +1,74 @@
+{
+  "11292" : {
+    "name" : "Яблоки",
+    "cost" : 335,
+    "category" : "під замовлення",
+    "stock" : "під замовлення",
+    "description" : "Зимові візерунки намалював мороз на моїх вікнах, що надихнуло мене створити це намисто",
+    "order" : "1",
+    "size" : "Довжина 30см. Ширина 2см.",
+    "material" : "Чешский бісер",
+    "clasp" : "Срібло",
+    "image" : "images/jewelry/green.jpg",
+    "image2" : "images/jewelry/yellow.jpg",
+    "image3" : "images/jewelry/black.jpg"
+  },
+  "11216" : {
+    "name" : "Джгут \"суниця\"",
+    "cost" : 400,
+    "category" : "акція",
+    "stock" : "в наявності",
+    "description" : "Зимові візерунки намалював мороз на моїх вікнах, що надихнуло мене створити це намисто",
+    "order" : "5",
+    "size" : "Довжина 30см. Ширина 2см.",
+    "material" : "Чешский бісер",
+    "clasp" : "Срібло",
+    "image" : "images/jewelry/green.jpg",
+    "image2" : "images/jewelry/yellow.jpg",
+    "image3" : "images/jewelry/black.jpg"
+  },
+  "11294" : {
+    "name" : "Джгут \"Сніжинка\"",
+    "cost" : 330,
+    "category" : "акція",
+    "stock" : "в наявності",  
+    "description" : "Желтые лимоны, классные",
+    "order" : "2",
+    "size" : "Довжина 30см. Ширина 2см.",
+    "material" : "Чешский бісер",
+    "clasp" : "Срібло",
+    "image" : "images/jewelry/blue.jpg",
+    "image2" : "images/jewelry/yellow.jpg",
+    "image3" : "images/jewelry/black.jpg"
+
+  },
+  "11295" : {
+    "name" : "Клубника",
+    "cost" : 450,
+    "category" : "в наявності",
+    "stock" : "в наявності",
+    "description" : "Спелая и сочная клубника",
+    "order" : "3",
+    "size" : "Довжина 30см. Ширина 2см.",
+    "material" : "Чешский бісер",
+    "clasp" : "Срібло",
+    "image" : "images/jewelry/yellow.jpg",
+    "image2" : "images/jewelry/yellow.jpg",
+    "image3" : "images/jewelry/black.jpg"
+  },
+  "11296" : {
+    "name" : "Томат",
+    "cost" : 500,
+    "category" : "новинки",
+    "stock" : "в наявності",
+    "description" : "Спелая и сочная Томата",
+    "order" : "4",
+    "size" : "Довжина 30см. Ширина 2см.",
+    "material" : "Чешский бісер",
+    "clasp" : "Срібло",
+    "image" : "images/jewelry/black.jpg",
+    "image2" : "images/jewelry/yellow.jpg",
+    "image3" : "images/jewelry/black.jpg"
+  }
+
+}
