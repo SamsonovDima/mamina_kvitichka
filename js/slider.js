@@ -1,6 +1,8 @@
 
 $('.navig_baner').slick({
     dots: true,
+    autoplay: true,
+    autoplaySpeed: 2000,
 });
 function slickSliderInfo(){
     $('.single-goods-images-heaad').slick({

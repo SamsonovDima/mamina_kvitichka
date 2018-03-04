@@ -252,13 +252,26 @@ body{
     transform: scale(1.2);
 }
 .goods_img-empty{
-    width: 225px;
+    width: 195px;
 }
 .main-cart{
-    width: 455px;
+    width: 100%;
     text-align: center;
     height: 280px;
     overflow-y: auto;
+}
+.info-massage{
+    font-family: Arsenal;
+    color:  #030000;
+    font-size: 25px;/* Приближение из-за подстановки шрифтов */
+    font-weight: 400;
+}
+.window-cart-help{
+    font-family: Arsenal;
+    color:  #030000;
+    font-size: 25px;/* Приближение из-за подстановки шрифтов */
+    font-weight: 400;
+    padding-left: 230px;
 }
 .main_img_wrap{
     height: 83px;
@@ -842,7 +855,7 @@ a{
     color:  #94287c;
     font-size: 22px;/* Приближение из-за подстановки шрифтов */
     font-weight: 400;
-   
+    display: none;
 }
 .up p{
     margin: 0;

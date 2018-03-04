@@ -15,7 +15,7 @@ function loadCart() {
 function showMainCart() {
 			//вывод корзины
     if (!isEmpty(cart)) {
-        $('.main-cart').html('<p>корзина пустая...</p> <img class="goods_img-empty" src="../images/cart/emptycart.png">');
+        $('.main-cart').html('<p class="info-massage">Будьласка положіть щось в кошик щоб мама відправила вам замовлення...</p> <img class="goods_img-empty" src="../images/cart/emptycart.png">');
         $('.summcost').hide();
         $('.email-field').hide();
         $('.main-cart_header').hide();
@@ -102,9 +102,11 @@ function goEmail() {
                 "ecity": ecity,
                 "etext": etext,
 				"cart" : cart
-			},
+            },
+            
 				function (data){
 					if(data == 1){
+                        
                         alert('Заказ отправлен')
                     }
                     else {
@@ -112,7 +114,8 @@ function goEmail() {
                     }
 				}
 
-			);
+            );
+            $('.window-cart').html('<p class="window-cart-help">Дякую, мама вже комплектуе ваше замовлення!</p> <a href="#close" title="Закрыть" id="close"><img src="images/cart/close btn.png" alt="close"></a>')
 		}
 		else{
 			alert('корзина пустая');
@@ -120,7 +123,8 @@ function goEmail() {
 	}
 	else {
 		alert('заполните поня'); 
-	}
+    }
+    
 }
 
 

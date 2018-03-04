@@ -6,17 +6,37 @@ $(document).ready(function() {
     init();
     loadCart();
     scrollBlock();
+    $('.send-form').on('click', goForm);
     
 });
+function goForm(){
+    var enameform = $('#ename-form').val();
+    var ephoneform = $('#ephone-form').val();
+    var emailform = $('#email-form').val();
+    var etextform = $('#etext-form').val();
+    if(enameform!=='' && ephoneform!=='' && emailform!=='' && etextform!==''){
+        $.post("core/form.php",{
+            "enameform" : enameform,
+            "ephoneform" : ephoneform,
+            "emailform" : emailform,
+            "etextform" : etextform
+        })
+        alert('Повідомлення відправленно');
+    }
+    else {
+        alert('Заповніть будьласка поля');
+    }
+    
+}
+
 function scrollBlock(){
     $(window).scroll(function() {
         if ($(this).scrollTop() > 500) {
            $('.up').css({
                 'display': 'block'
             });
-        
-            }
-            else{
+        }
+        else{
                 $('.up').css({
                     'display': 'none'
                 });
