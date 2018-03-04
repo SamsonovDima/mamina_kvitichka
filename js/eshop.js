@@ -5,8 +5,24 @@ $(document).ready(function() {
     
     init();
     loadCart();
+    scrollBlock();
+    
 });
-
+function scrollBlock(){
+    $(window).scroll(function() {
+        if ($(this).scrollTop() > 500) {
+           $('.up').css({
+                'display': 'block'
+            });
+        
+            }
+            else{
+                $('.up').css({
+                    'display': 'none'
+                });
+            }
+    }); 
+}
 
 function init() {
     $.getJSON("goods.json", goodsOut); //подгрузка json
