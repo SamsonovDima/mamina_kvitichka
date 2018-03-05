@@ -64,6 +64,9 @@ body{
     justify-content: space-around;
     /* font-family: 'Bitter', serif; */
 }
+.nav_menu_insta a{
+    padding-left: 10px;     
+}
 .nav_menu_submenu{
     display: flex;
     justify-content: flex-end;
@@ -265,6 +268,7 @@ body{
     color:  #030000;
     font-size: 25px;/* Приближение из-за подстановки шрифтов */
     font-weight: 400;
+    padding-top: 120px;
 }
 .window-cart-help{
     font-family: Arsenal;
@@ -778,6 +782,13 @@ a{
     margin: 12px 0 12px 0;
 }
 .footer_content-form-contact-phon span, .footer_content-form-contact-email span, .footer_content-form-contact-insta span{
+    margin-left: 20px;
+    font-family: Arsenal;
+    color:  #030000;
+    font-size: 20px;
+    font-weight: 400;
+}
+.footer_content-form-contact-insta a{
     margin-left: 20px;
     font-family: Arsenal;
     color:  #030000;

@@ -15,7 +15,7 @@ function loadCart() {
 function showMainCart() {
 			//вывод корзины
     if (!isEmpty(cart)) {
-        $('.main-cart').html('<p class="info-massage">Будьласка положіть щось в кошик щоб мама відправила вам замовлення...</p> <img class="goods_img-empty" src="../images/cart/emptycart.png">');
+        $('.main-cart').html('<p class="info-massage">Будьласка положіть щось в кошик щоб мама відправила вам замовлення...</p> '); //<img class="goods_img-empty" src="../images/cart/emptycart.png">
         $('.summcost').hide();
         $('.email-field').hide();
         $('.main-cart_header').hide();

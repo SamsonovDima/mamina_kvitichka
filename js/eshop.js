@@ -7,6 +7,7 @@ $(document).ready(function() {
     loadCart();
     scrollBlock();
     $('.send-form').on('click', goForm);
+    // $(location).attr('href','http://127.0.0.1:5500/')
     
 });
 function goForm(){
@@ -84,7 +85,7 @@ function goodsOut(data) {
 
         out += '<div class="show_goods_info">';
 
-        out += `<a href="#openmodal" class="inform" info-id="${key}">Описание</a>` //ссылка, при нажатии всплывает инфо  окно
+        out += `<a href="#openmodal" class="inform" info-id="${key}">Опис</a>` //ссылка, при нажатии всплывает инфо  окно
         out += `<a class="add-to-cart" data-id="${key}">Купити</a>`
         out += `<h3 class="show_goods-name" id="hide_goods-name">${data[key].name}</h3>`; // скрытый выводим имя товара
         out += '</div>';
@@ -185,7 +186,8 @@ function addToInfo() { //всплывающее окно дополнитель�
     out += '</div>';
 
     out += '<div class="single-goods-inform">';
-    out += `<p>Ці параметри можна буде змінити (на замовленя)<br> Для замовлення скористуйтесь формою зворотнього звязку</p>`
+    out += `<p>При Виготовлені прикраси, усі параметри можуть бути змінені<br> 
+            Для оформлення замовлення скористуйтесь формою зворотнього зв'язку</p>`
     out += '</div>';
 
     out += '<div class="single-goods-produkt">';
@@ -258,6 +260,7 @@ function showMiniCart() {
 function saveCart() {
     //сохраняю мини корзину в локал стор конвертирую масив в строку
     localStorage.setItem('cart', JSON.stringify(cart));
+   
 }
 
 function loadCart() {
@@ -272,7 +275,7 @@ function loadCart() {
 function stockCart() {
     $('.single-goods').each(function() {
         if ($(this).find('.show_goods-stock').text() == 'під замовлення') {
-            $(this).find('.add-to-cart').removeClass('add-to-cart').attr('id','stock').text('замовити').attr('href', '#stock_input');
+            $(this).find('.add-to-cart').removeClass('add-to-cart').attr('id','stock').text('Замовити').attr('href', '#stock_input');
             $(this).find('.show_goods-stock').attr('id', 'show_goods-stock');
         }
     });

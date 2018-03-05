@@ -5,7 +5,7 @@
 
 //письмо
 $message = '';
-$message .= '<h1>Зворотній звязок</h1>';
+// $message .= '<h1>Зворотній звязок</h1>';
 $message .='<p>Імя: '.$_POST['enameform'].'</p>';
 $message .='<p>Телефон: '.$_POST['ephoneform'].'</p>';
 $message .='<p>Пошта: '.$_POST['emailform'].'</p>';
@@ -31,7 +31,7 @@ $to = 'dimka0somik@gmail.com'.','; //не забудь поменять!
 $spectext = '<!DOCTYPE HTML><html><head><title>Заказ</title></head><body>';
 $headers  = 'MIME-Version: 1.0' . "\r\n";
 $headers .= 'Content-type: text/html; charset=utf-8' . "\r\n";
-
+$headers .= 'From: mamyna_kv <mamyna_kv@gmail.com>';
 $m = mail($to, 'Зворотній звязок', $spectext.$message.'</body></html>', $headers);
 
 if ($m) {echo 1;} else {echo 0;}
