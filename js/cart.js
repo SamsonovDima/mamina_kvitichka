@@ -37,11 +37,12 @@ function showMainCart() {
                 out += `</div>`;
                 out += `<br>`;
             }
+            $('.main-cart').html(out);
             $('.summcost').show();
             $('.email-field').show();
             $('.main-cart_header').show();
             // $('.main_cart_form').show();
-            $('.main-cart').html(out);
+            
             $('.del-goods').on('click', delGoods);
             sumCart();
 
@@ -77,7 +78,7 @@ function delGoods() {
 }
 
 function isEmpty(object) {
-    //проверка копзины (массива) на пустоту
+    //проверка козины (массива) на пустоту
     for (var key in object)
         if (object.hasOwnProperty(key)) return true;
     return false;

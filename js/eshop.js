@@ -2,14 +2,12 @@ var cart = {}; //корзина;
 var goods = {}; //описание
 
 $(document).ready(function() {
-    
     init();
     loadCart();
     scrollBlock();
     $('.send-form').on('click', goForm);
-    // $(location).attr('href','http://127.0.0.1:5500/')
-    
-});
+})
+
 function goForm(){
     var enameform = $('#ename-form').val();
     var ephoneform = $('#ephone-form').val();
@@ -120,42 +118,40 @@ function goodsOut(data) {
     //вывожу значение по клилку в инпут
     $('#stock').on('click', function(){
                 var food = $(this).parent().find('.show_goods-name').text();
-                // или так
-                // var food = $(this).prev().text();
                 $('.etext-form').val('Я хочу замовити ' + food);
-                // или со словом "заказать"
-                // $('.out').val(food + ' (заказать)');
               });
     
 
-    // $('.stock').on('click', addToStock);
     $('.add-to-cart').on('click', addToCart); // функция на кнопку купить
-    $('.inform').on('click', addToInfo); //при нажании на ссылку должно всплывать окно с информацией о товаре
+    $('.inform').on('click', function () {
+        addToInfo($(this).attr('info-id'))
+    }); //при нажании на ссылку должно всплывать окно с информацией о товаре
     showMiniCart();
 
-    
+    if (window.location.hash == '#openmodal') {
+        var productId = localStorage.getItem('popup-item')
+        addToInfo(productId)
+    }
 }
 
-// function addToStock() {
-//     alert("нет на складе");
-// }
-
-function addToInfo() { //всплывающее окно дополнительной информации
-    var id = $(this).attr('info-id'); // this именно та кнопка по которой я кликаю attr атрибут
+function addToInfo(id) { //всплывающее окно дополнительной информации
+    // var id = $(this).attr('info-id'); // this именно та кнопка по которой я кликаю attr атрибут
     var product = goods[id]
+    console.log(goods)
+
     var out = '';
 
     out += '<a href="#close" title="Закрыть" class="close"><img src="images/cart/close btn.png" alt="close"></a>';
 
     out += '<div class="single-goods-images">';
     out += '<div class="single-goods-images-heaad">';
-    out += `<img class="single_goods_img-info" src="${product.image}">`;
+    out += `<img class="single_goods_img-info" src="${product.image1}">`;
     out += `<img class="single_goods_img-info" src="${product.image2}">`;
     out += `<img class="single_goods_img-info" src="${product.image3}">`;
     //еще фото
     out += '</div>';
     out += '<div class="single-goods-min">';
-    out += `<img class="single_goods_img-info" src="${product.image}">`;
+    out += `<img class="single_goods_img-info" src="${product.image1}">`;
     out += `<img class="single_goods_img-info" src="${product.image2}">`;
     out += `<img class="single_goods_img-info" src="${product.image3}">`;
     out += '</div>';
@@ -207,6 +203,7 @@ function addToInfo() { //всплывающее окно дополнитель�
 
 
     $('.content').html(out);
+    localStorage.setItem('popup-item', id);
     stockCart();
     stockNoNCart();
     slickSliderInfo(); //slick слайдер
@@ -260,7 +257,6 @@ function showMiniCart() {
 function saveCart() {
     //сохраняю мини корзину в локал стор конвертирую масив в строку
     localStorage.setItem('cart', JSON.stringify(cart));
-   
 }
 
 function loadCart() {
